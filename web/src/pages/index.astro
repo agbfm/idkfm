@@ -5,19 +5,25 @@ import Card from '../components/Card.astro';
 
 <Layout title="idk.fm">
 	<main>
-		<p class="intro">Like any seasoned software engineer, my common sense dictates that some form of a portfolio website is necessary to demonstrate my experience, while a humble dose of imposter syndrome forever ensures that I don't go over the top.</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://github.com/agbfm"
-				title="GitHub"
-				body="Although most work happens behind closed doors, I'm building things in the open as much as possible."
-			/>
-			<Card
-				href="https://www.linkedin.com/in/agbfm/"
-				title="LinkedIn"
-				body="My career experience described in a professional manner, complete with handsome wedding headshot."
-			/>
-		</ul>
+		<div class="section">
+			<h2>Intro</h2>
+			<p>Like any software engineer, my common sense dictates that some form of a portfolio website is necessary to demonstrate my experience, while at the same time a humble dose of imposter syndrome forever ensures that I don't go over the top.</p>
+		</div>
+		<div class="section">
+			<h2>Resources</h2>
+			<ul role="list" class="link-card-grid">
+				<Card
+					href="https://github.com/agbfm"
+					title="GitHub"
+					body="Although most commercial work is done behind closed doors, I am building things in the open as much as possible."
+				/>
+				<Card
+					href="https://www.linkedin.com/in/agbfm/"
+					title="LinkedIn"
+					body="My career experience described in a professional manner, complete with handsome wedding headshot."
+				/>
+			</ul>
+		</div>
 	</main>
 </Layout>
 
@@ -38,8 +44,14 @@ import Card from '../components/Card.astro';
 		text-align: center;
 		margin-bottom: 1em;
 	}
-	.intro {
-		padding: 2rem 0;
+	h2 {
+		margin: 0.25rem 0;
+	}
+	.section {
+		margin-top: 2rem;
+	}
+	p {
+		margin: 0;
 	}
 	.link-card-grid {
 		display: grid;
