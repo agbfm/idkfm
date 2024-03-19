@@ -19,7 +19,9 @@ resource "cloudflare_pages_project" "idkfm" {
   }
 
   build_config {
-    root_dir = "web"
+    root_dir        = "web"
+    destination_dir = "dist"
+    build_command   = "bun run build"
   }
 }
 
