@@ -12,7 +12,3 @@ output "cloudflare_pages_project_subdomain" {
   value       = cloudflare_pages_project.idkfm.subdomain
   description = "The subdomain of the Cloudflare pages project"
 }
-
-output "cloudflare_pages_webhook_url" {
-  value = nonsensitive(discord_webhook.webhook.url)
-}
