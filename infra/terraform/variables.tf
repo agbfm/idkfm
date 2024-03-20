@@ -20,3 +20,14 @@ variable "cloudflare_zone_id" {
   sensitive   = true
   type        = string
 }
+
+variable "discord_token" {
+  description = "The Discord API token"
+  sensitive   = true
+  type        = string
+}
+
+variable "discord_server_id" {
+  description = "The ID of the Discord server to manage"
+  type        = string
+}

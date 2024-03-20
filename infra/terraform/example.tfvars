@@ -1,3 +1,6 @@
 github_token          = ""
 cloudflare_account_id = ""
 cloudflare_api_token  = ""
+cloudflare_zone_id    = ""
+discord_token         = ""
+discord_server_id     = ""

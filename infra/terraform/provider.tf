@@ -5,3 +5,7 @@ provider "github" {
 provider "cloudflare" {
   api_token = var.cloudflare_api_token
 }
+
+provider "discord" {
+  token = var.discord_token
+}

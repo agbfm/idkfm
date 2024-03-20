@@ -38,3 +38,21 @@ resource "cloudflare_pages_domain" "my-domain" {
   project_name = cloudflare_pages_project.idkfm.name
   domain       = cloudflare_record.idkfm.hostname
 }
+
+resource "cloudflare_notification_policy_webhooks" "idkfm_webhooks" {
+  account_id = var.cloudflare_account_id
+  name       = "Discord webhook"
+  url        = discord_webhook.webhook.url
+}
+
+resource "cloudflare_notification_policy" "idkfm_notifications" {
+  account_id  = var.cloudflare_account_id
+  name        = "Policy for Pages notification events"
+  description = "Notification policy to alert when Pages deployments are made"
+  enabled     = true
+  alert_type  = "pages_event_alert"
+
+  webhooks_integration {
+    id = cloudflare_notification_policy_webhooks.idkfm_webhooks.id
+  }
+}
